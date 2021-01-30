@@ -18,6 +18,7 @@ namespace ElevenNote.Services
             _userId = userId;
         }
 
+        // CREATE service method
         public bool CreateNote(NoteCreate model)
         {
             var entity =
@@ -35,7 +36,7 @@ namespace ElevenNote.Services
                 return ctx.SaveChanges() == 1;
             }
         }
-
+        // GET all service method
         public IEnumerable<NoteListItem> GetNotes()
         {
             using (ApplicationDbContext ctx = new ApplicationDbContext())
@@ -54,6 +55,26 @@ namespace ElevenNote.Services
                             }
                     );
                 return query.ToArray();
+            }
+        }
+        // GET by Id service method
+        public NoteDetail GetNoteById(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Notes
+                        .Single(e => e.NoteId == id && e.OwnerId == _userId);
+                return
+                    new NoteDetail
+                    {
+                        NoteId = entity.NoteId,
+                        Title = entity.Title,
+                        Content = entity.Content,
+                        CreatedUtc = entity.CreatedUtc,
+                        ModifiedUtc = entity.ModifiedUtc
+                    };
             }
         }
     }
