@@ -13,6 +13,7 @@ namespace ElevenNote.WebAPI.Controllers
     [Authorize]
     public class NoteController : ApiController
     {
+        // GET all notes
         [HttpGet]
         public IHttpActionResult Get()
         {
@@ -21,7 +22,15 @@ namespace ElevenNote.WebAPI.Controllers
             return Ok(notes);
         }
 
-        [HttpPost]
+        //GET notes by Id (needs a corresponding service method)
+        [HttpGet]
+        public IHttpActionResult Get(int id)
+        {
+            NoteService noteService = CreateNoteService();
+            var note = noteService.GetNoteById(id);
+            return Ok(note);
+        }
+        
         public IHttpActionResult Post(NoteCreate note)
         {
             if (!ModelState.IsValid)
