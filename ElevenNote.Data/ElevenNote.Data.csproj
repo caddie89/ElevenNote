@@ -68,6 +68,34 @@
     <Compile Include="Migrations\202101310513087_ThirdMigration.Designer.cs">
       <DependentUpon>202101310513087_ThirdMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202101311552143_FourthMigration.cs" />
+    <Compile Include="Migrations\202101311552143_FourthMigration.Designer.cs">
+      <DependentUpon>202101311552143_FourthMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101311555509_CategoryObjects.cs" />
+    <Compile Include="Migrations\202101311555509_CategoryObjects.Designer.cs">
+      <DependentUpon>202101311555509_CategoryObjects.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101311759035_CategoryObjects1.cs" />
+    <Compile Include="Migrations\202101311759035_CategoryObjects1.Designer.cs">
+      <DependentUpon>202101311759035_CategoryObjects1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101311817149_ForeignKeyAdded.cs" />
+    <Compile Include="Migrations\202101311817149_ForeignKeyAdded.Designer.cs">
+      <DependentUpon>202101311817149_ForeignKeyAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101311818501_ForeignKeyAdded1.cs" />
+    <Compile Include="Migrations\202101311818501_ForeignKeyAdded1.Designer.cs">
+      <DependentUpon>202101311818501_ForeignKeyAdded1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101311826429_ForeignKey.cs" />
+    <Compile Include="Migrations\202101311826429_ForeignKey.Designer.cs">
+      <DependentUpon>202101311826429_ForeignKey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101311834226_AnotherMigration.cs" />
+    <Compile Include="Migrations\202101311834226_AnotherMigration.Designer.cs">
+      <DependentUpon>202101311834226_AnotherMigration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Note.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -85,6 +113,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202101310513087_ThirdMigration.resx">
       <DependentUpon>202101310513087_ThirdMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101311552143_FourthMigration.resx">
+      <DependentUpon>202101311552143_FourthMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101311555509_CategoryObjects.resx">
+      <DependentUpon>202101311555509_CategoryObjects.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101311759035_CategoryObjects1.resx">
+      <DependentUpon>202101311759035_CategoryObjects1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101311817149_ForeignKeyAdded.resx">
+      <DependentUpon>202101311817149_ForeignKeyAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101311818501_ForeignKeyAdded1.resx">
+      <DependentUpon>202101311818501_ForeignKeyAdded1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101311826429_ForeignKey.resx">
+      <DependentUpon>202101311826429_ForeignKey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101311834226_AnotherMigration.resx">
+      <DependentUpon>202101311834226_AnotherMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

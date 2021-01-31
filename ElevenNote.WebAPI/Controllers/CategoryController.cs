@@ -11,24 +11,6 @@ namespace ElevenNote.WebAPI.Controllers
 {
     public class CategoryController : ApiController
     {
-        //// GET all notes
-        //[HttpGet]
-        //public IHttpActionResult Get()
-        //{
-        //    CategoryService categoryService = CreateCategoryService();
-        //    var notes = categoryService.GetCategories();
-        //    return Ok(notes);
-        //}
-
-        ////GET notes by Id (needs a corresponding service method)
-        //[HttpGet]
-        //public IHttpActionResult Get(int id)
-        //{
-        //    CategoryService categoryService = CreateCategoryService();
-        //    var category = categoryService.GetNoteById(id);
-        //    return Ok(note);
-        //}
-
         // POST
         [HttpPost]
         public IHttpActionResult Post(CategoryCreate category)
@@ -43,7 +25,51 @@ namespace ElevenNote.WebAPI.Controllers
 
             return Ok();
         }
+        
+        // GET all notes
+        [HttpGet]
+        public IHttpActionResult Get()
+        {
+            CategoryService categoryService = CreateCategoryService();
+            var categories = categoryService.GetCategories();
+            return Ok(categories);
+        }
+        // GET notes by Id (needs a corresponding service method)
+        [HttpGet]
+        public IHttpActionResult Get(int id)
+        {
+            CategoryService categoryService = CreateCategoryService();
+            var category = categoryService.GetCategoryById(id);
+            return Ok(category);
+            
+        }
+        // PUT
+        [HttpPut]
+        public IHttpActionResult Put(CategoryEdit category)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
 
+            var service = CreateCategoryService();
+
+            if (!service.UpdateCategory(category))
+                return InternalServerError();
+
+            return Ok();
+        }
+        // DELETE
+        [HttpDelete]
+        public IHttpActionResult Delete(int id)
+        {
+            var service = CreateCategoryService();
+
+            if (!service.DeleteCategory(id))
+                return InternalServerError();
+
+            return Ok();
+        }
+
+        // Helper method??
         private CategoryService CreateCategoryService()
         {
             var categoryService = new CategoryService();

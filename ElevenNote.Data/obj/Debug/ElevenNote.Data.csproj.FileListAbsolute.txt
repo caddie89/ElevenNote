@@ -18,3 +18,10 @@ C:\ElevenFiftyProjects\BlueBadgeProjects\ElevenNote\ElevenNote.Data\obj\Debug\El
 C:\ElevenFiftyProjects\BlueBadgeProjects\ElevenNote\ElevenNote.Data\obj\Debug\ElevenNote.Data.csproj.GenerateResource.cache
 C:\ElevenFiftyProjects\BlueBadgeProjects\ElevenNote\ElevenNote.Data\obj\Debug\ElevenNote.Data.Migrations.SecondMigration.resources
 C:\ElevenFiftyProjects\BlueBadgeProjects\ElevenNote\ElevenNote.Data\obj\Debug\ElevenNote.Data.Migrations.ThirdMigration.resources
+C:\ElevenFiftyProjects\BlueBadgeProjects\ElevenNote\ElevenNote.Data\obj\Debug\ElevenNote.Data.Migrations.FourthMigration.resources
+C:\ElevenFiftyProjects\BlueBadgeProjects\ElevenNote\ElevenNote.Data\obj\Debug\ElevenNote.Data.Migrations.CategoryObjects.resources
+C:\ElevenFiftyProjects\BlueBadgeProjects\ElevenNote\ElevenNote.Data\obj\Debug\ElevenNote.Data.Migrations.CategoryObjects1.resources
+C:\ElevenFiftyProjects\BlueBadgeProjects\ElevenNote\ElevenNote.Data\obj\Debug\ElevenNote.Data.Migrations.ForeignKeyAdded.resources
+C:\ElevenFiftyProjects\BlueBadgeProjects\ElevenNote\ElevenNote.Data\obj\Debug\ElevenNote.Data.Migrations.ForeignKeyAdded1.resources
+C:\ElevenFiftyProjects\BlueBadgeProjects\ElevenNote\ElevenNote.Data\obj\Debug\ElevenNote.Data.Migrations.ForeignKey.resources
+C:\ElevenFiftyProjects\BlueBadgeProjects\ElevenNote\ElevenNote.Data\obj\Debug\ElevenNote.Data.Migrations.AnotherMigration.resources

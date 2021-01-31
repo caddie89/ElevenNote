@@ -25,7 +25,75 @@ namespace ElevenNote.Services
                 ctx.Categories.Add(entity);
                 return ctx.SaveChanges() == 1;
             }
+        }
+        // GET all
+        public IEnumerable<CategoryListItem> GetCategories()
+        {
+            using (ApplicationDbContext ctx = new ApplicationDbContext())
+            {
+                var query =
+                    ctx
+                    .Categories
+                    .Select(
+                        e =>
+                            new CategoryListItem
+                            {
+                                CategoryId = e.CategoryId,
+                                CategoryName = e.CategoryName
+                            }
+                     );
+                return query.ToArray();
+            }
+        }
+        // GET by ID
+        public CategoryDetail GetCategoryById(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Categories
+                        .Single(e => e.CategoryId == id);
+                {
+                    return
+                        new CategoryDetail
+                        {
+                            CategoryId = entity.CategoryId,
+                            CategoryName = entity.CategoryName
+                        };
+                }
+            }
+        }
+        // PUT
+        public bool UpdateCategory(CategoryEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Categories
+                        .Single(e => e.CategoryId == model.CategoryId);
 
+                entity.CategoryId = model.CategoryId;
+                entity.CategoryName = model.CategoryName;
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
+        // DELETE
+        public bool DeleteCategory(int categoryId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                    .Categories
+                    .Single(e => e.CategoryId == categoryId);
+
+                ctx.Categories.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
+            }
         }
     }
 }

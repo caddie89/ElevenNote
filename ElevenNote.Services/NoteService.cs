@@ -2,6 +2,7 @@
 using ElevenNote.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,17 +22,21 @@ namespace ElevenNote.Services
         // POST service method
         public bool CreateNote(NoteCreate model)
         {
-            var category = _context.Categories.Where(e => e.CategoryId == model.CategoryId);
+            //var category = _context
+            //   .Categories
+               //.Where(e => e.CategoryId == model.CategoryId)
+               //.Include(e => e.CategoryId);
 
             var entity =
-                new Note()
-                {
-                    OwnerId = _userId,
-                    CategoryId = model.CategoryId,
-                    Title = model.Title,
-                    Content = model.Content,
-                    CreatedUtc = DateTimeOffset.Now
-                };
+
+            new Note()
+            {
+                OwnerId = _userId,
+                CategoryId = model.CategoryId,
+                Title = model.Title,
+                Content = model.Content,
+                CreatedUtc = DateTimeOffset.Now
+            };
 
             using (var ctx = new ApplicationDbContext())
             {
@@ -79,6 +84,7 @@ namespace ElevenNote.Services
                         Title = entity.Title,
                         Content = entity.Content,
                         CreatedUtc = entity.CreatedUtc,
+                        CategoryName = entity.Category.CategoryName,
                         ModifiedUtc = entity.ModifiedUtc
                     };
             }
@@ -93,6 +99,7 @@ namespace ElevenNote.Services
                         .Notes
                         .Single(e => e.NoteId == model.NoteId && e.OwnerId == _userId);
 
+                entity.CategoryId = model.CategoryId;
                 entity.Title = model.Title;
                 entity.Content = model.Content;
                 entity.ModifiedUtc = DateTimeOffset.UtcNow;
