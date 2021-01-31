@@ -16,3 +16,5 @@ C:\ElevenFiftyProjects\BlueBadgeProjects\ElevenNote\ElevenNote.Data\obj\Debug\El
 C:\ElevenFiftyProjects\BlueBadgeProjects\ElevenNote\ElevenNote.Data\obj\Debug\ElevenNote.Data.pdb
 C:\ElevenFiftyProjects\BlueBadgeProjects\ElevenNote\ElevenNote.Data\obj\Debug\ElevenNote.Data.Migrations.InitialMigration.resources
 C:\ElevenFiftyProjects\BlueBadgeProjects\ElevenNote\ElevenNote.Data\obj\Debug\ElevenNote.Data.csproj.GenerateResource.cache
+C:\ElevenFiftyProjects\BlueBadgeProjects\ElevenNote\ElevenNote.Data\obj\Debug\ElevenNote.Data.Migrations.SecondMigration.resources
+C:\ElevenFiftyProjects\BlueBadgeProjects\ElevenNote\ElevenNote.Data\obj\Debug\ElevenNote.Data.Migrations.ThirdMigration.resources

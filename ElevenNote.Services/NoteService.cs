@@ -11,6 +11,7 @@ namespace ElevenNote.Services
     public class NoteService
     {
         private readonly Guid _userId;
+        private readonly ApplicationDbContext _context = new ApplicationDbContext();
 
         public NoteService(Guid userId)
         {
@@ -20,13 +21,15 @@ namespace ElevenNote.Services
         // POST service method
         public bool CreateNote(NoteCreate model)
         {
+            var category = _context.Categories.Where(e => e.CategoryId == model.CategoryId);
+
             var entity =
                 new Note()
                 {
                     OwnerId = _userId,
+                    CategoryId = model.CategoryId,
                     Title = model.Title,
                     Content = model.Content,
-                    NameOfCategory = model.NameOfCategory,
                     CreatedUtc = DateTimeOffset.Now
                 };
 
@@ -36,6 +39,7 @@ namespace ElevenNote.Services
                 return ctx.SaveChanges() == 1;
             }
         }
+
         // GET all service method
         public IEnumerable<NoteListItem> GetNotes()
         {
@@ -50,8 +54,8 @@ namespace ElevenNote.Services
                             new NoteListItem
                             {
                                 NoteId = e.NoteId,
+                                CategoryId = e.CategoryId,
                                 Title = e.Title,
-                                NameOfCategory = e.NameOfCategory,
                                 CreatedUtc = e.CreatedUtc
                             }
                     );
@@ -74,7 +78,6 @@ namespace ElevenNote.Services
                         CategoryId = entity.CategoryId,
                         Title = entity.Title,
                         Content = entity.Content,
-                        NameOfCategory = entity.NameOfCategory,
                         CreatedUtc = entity.CreatedUtc,
                         ModifiedUtc = entity.ModifiedUtc
                     };
@@ -92,7 +95,6 @@ namespace ElevenNote.Services
 
                 entity.Title = model.Title;
                 entity.Content = model.Content;
-                entity.NameOfCategory = model.NameOfCategory;
                 entity.ModifiedUtc = DateTimeOffset.UtcNow;
 
                 return ctx.SaveChanges() == 1;
