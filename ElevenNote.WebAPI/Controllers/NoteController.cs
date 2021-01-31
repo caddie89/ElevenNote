@@ -31,6 +31,8 @@ namespace ElevenNote.WebAPI.Controllers
             return Ok(note);
         }
         
+        // POST
+        [HttpPost]
         public IHttpActionResult Post(NoteCreate note)
         {
             if (!ModelState.IsValid)
@@ -39,6 +41,31 @@ namespace ElevenNote.WebAPI.Controllers
             var service = CreateNoteService();
 
             if (!service.CreateNote(note))
+                return InternalServerError();
+
+            return Ok();
+        }
+        // PUT
+        [HttpPut]
+        public IHttpActionResult Put(NoteEdit note)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var service = CreateNoteService();
+
+            if (!service.UpdateNote(note))
+                return InternalServerError();
+
+            return Ok();
+        }
+        // DELETE
+        [HttpDelete]
+        public IHttpActionResult Delete(int id)
+        {
+            var service = CreateNoteService();
+
+            if (!service.DeleteNote(id))
                 return InternalServerError();
 
             return Ok();

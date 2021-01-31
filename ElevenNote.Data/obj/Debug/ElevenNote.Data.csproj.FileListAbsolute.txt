@@ -14,3 +14,5 @@ C:\ElevenFiftyProjects\BlueBadgeProjects\ElevenNote\ElevenNote.Data\bin\Debug\Mi
 C:\ElevenFiftyProjects\BlueBadgeProjects\ElevenNote\ElevenNote.Data\obj\Debug\ElevenNote.Data.csproj.CopyComplete
 C:\ElevenFiftyProjects\BlueBadgeProjects\ElevenNote\ElevenNote.Data\obj\Debug\ElevenNote.Data.dll
 C:\ElevenFiftyProjects\BlueBadgeProjects\ElevenNote\ElevenNote.Data\obj\Debug\ElevenNote.Data.pdb
+C:\ElevenFiftyProjects\BlueBadgeProjects\ElevenNote\ElevenNote.Data\obj\Debug\ElevenNote.Data.Migrations.InitialMigration.resources
+C:\ElevenFiftyProjects\BlueBadgeProjects\ElevenNote\ElevenNote.Data\obj\Debug\ElevenNote.Data.csproj.GenerateResource.cache

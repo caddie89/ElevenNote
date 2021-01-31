@@ -1,5 +1,4 @@
 ﻿using ElevenNote.Data;
-using ElevenNote.ElevenNote.Data;
 using ElevenNote.Models;
 using System;
 using System.Collections.Generic;
@@ -18,7 +17,7 @@ namespace ElevenNote.Services
             _userId = userId;
         }
 
-        // CREATE service method
+        // POST service method
         public bool CreateNote(NoteCreate model)
         {
             var entity =
@@ -77,7 +76,7 @@ namespace ElevenNote.Services
                     };
             }
         }
-        // POST 
+        // PUT service method
         public bool UpdateNote(NoteEdit model)
         {
             using (var ctx = new ApplicationDbContext())
@@ -93,6 +92,21 @@ namespace ElevenNote.Services
 
                 return ctx.SaveChanges() == 1;
 
+            }
+        }
+        // DELETE service method
+        public bool DeleteNote(int noteId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Notes
+                        .Single(e => e.NoteId == noteId && e.OwnerId == _userId);
+
+                ctx.Notes.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
             }
         }
     }

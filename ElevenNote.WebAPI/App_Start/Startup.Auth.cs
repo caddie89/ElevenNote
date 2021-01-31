@@ -10,7 +10,7 @@ using Microsoft.Owin.Security.OAuth;
 using Owin;
 using ElevenNote.WebAPI.Providers;
 using ElevenNote.WebAPI.Models;
-using ElevenNote.ElevenNote.Data;
+using ElevenNote.Data;
 
 namespace ElevenNote.WebAPI
 {
