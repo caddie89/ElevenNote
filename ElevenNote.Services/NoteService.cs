@@ -22,11 +22,6 @@ namespace ElevenNote.Services
         // POST service method
         public bool CreateNote(NoteCreate model)
         {
-            //var category = _context
-            //   .Categories
-               //.Where(e => e.CategoryId == model.CategoryId)
-               //.Include(e => e.CategoryId);
-
             var entity =
 
             new Note()
@@ -61,6 +56,7 @@ namespace ElevenNote.Services
                                 NoteId = e.NoteId,
                                 CategoryId = e.CategoryId,
                                 Title = e.Title,
+                                CategoryName = e.Category.CategoryName,
                                 CreatedUtc = e.CreatedUtc
                             }
                     );
@@ -84,7 +80,7 @@ namespace ElevenNote.Services
                         Title = entity.Title,
                         Content = entity.Content,
                         CreatedUtc = entity.CreatedUtc,
-                        CategoryName = entity.Category.CategoryName,
+                        CategoryName = entity.Category.CategoryName, // Bringing in CategoryName because of the ForeignKey!!!
                         ModifiedUtc = entity.ModifiedUtc
                     };
             }
