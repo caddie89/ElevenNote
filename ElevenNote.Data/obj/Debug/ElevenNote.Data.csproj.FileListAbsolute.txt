@@ -25,3 +25,17 @@ C:\ElevenFiftyProjects\BlueBadgeProjects\ElevenNote\ElevenNote.Data\obj\Debug\El
 C:\ElevenFiftyProjects\BlueBadgeProjects\ElevenNote\ElevenNote.Data\obj\Debug\ElevenNote.Data.Migrations.ForeignKeyAdded1.resources
 C:\ElevenFiftyProjects\BlueBadgeProjects\ElevenNote\ElevenNote.Data\obj\Debug\ElevenNote.Data.Migrations.ForeignKey.resources
 C:\ElevenFiftyProjects\BlueBadgeProjects\ElevenNote\ElevenNote.Data\obj\Debug\ElevenNote.Data.Migrations.AnotherMigration.resources
+C:\ElevenFiftyProjects\BlueBadgeProjects\ElevenNote\ElevenNote.Data\bin\Debug\Microsoft.Owin.Cors.dll
+C:\ElevenFiftyProjects\BlueBadgeProjects\ElevenNote\ElevenNote.Data\bin\Debug\Microsoft.Owin.dll
+C:\ElevenFiftyProjects\BlueBadgeProjects\ElevenNote\ElevenNote.Data\bin\Debug\Newtonsoft.Json.dll
+C:\ElevenFiftyProjects\BlueBadgeProjects\ElevenNote\ElevenNote.Data\bin\Debug\Owin.dll
+C:\ElevenFiftyProjects\BlueBadgeProjects\ElevenNote\ElevenNote.Data\bin\Debug\System.Net.Http.Formatting.dll
+C:\ElevenFiftyProjects\BlueBadgeProjects\ElevenNote\ElevenNote.Data\bin\Debug\System.Web.Cors.dll
+C:\ElevenFiftyProjects\BlueBadgeProjects\ElevenNote\ElevenNote.Data\bin\Debug\System.Web.Http.Cors.dll
+C:\ElevenFiftyProjects\BlueBadgeProjects\ElevenNote\ElevenNote.Data\bin\Debug\System.Web.Http.dll
+C:\ElevenFiftyProjects\BlueBadgeProjects\ElevenNote\ElevenNote.Data\bin\Debug\Microsoft.Owin.xml
+C:\ElevenFiftyProjects\BlueBadgeProjects\ElevenNote\ElevenNote.Data\bin\Debug\Microsoft.Owin.Cors.xml
+C:\ElevenFiftyProjects\BlueBadgeProjects\ElevenNote\ElevenNote.Data\bin\Debug\Newtonsoft.Json.xml
+C:\ElevenFiftyProjects\BlueBadgeProjects\ElevenNote\ElevenNote.Data\bin\Debug\System.Net.Http.Formatting.xml
+C:\ElevenFiftyProjects\BlueBadgeProjects\ElevenNote\ElevenNote.Data\bin\Debug\System.Web.Http.xml
+C:\ElevenFiftyProjects\BlueBadgeProjects\ElevenNote\ElevenNote.Data\bin\Debug\System.Web.Http.Cors.xml
