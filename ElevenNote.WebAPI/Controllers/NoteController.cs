@@ -1,4 +1,5 @@
-﻿using ElevenNote.Models;
+﻿using ElevenNote.Data;
+using ElevenNote.Models;
 using ElevenNote.Services;
 using Microsoft.AspNet.Identity;
 using System;
@@ -13,24 +14,8 @@ namespace ElevenNote.WebAPI.Controllers
     [Authorize]
     public class NoteController : ApiController
     {
-        // GET all notes
-        [HttpGet]
-        public IHttpActionResult Get()
-        {
-            NoteService noteService = CreateNoteService();
-            var notes = noteService.GetNotes();
-            return Ok(notes);
-        }
+        private readonly ApplicationDbContext _context = new ApplicationDbContext();
 
-        //GET notes by Id (needs a corresponding service method)
-        [HttpGet]
-        public IHttpActionResult Get(int id)
-        {
-            NoteService noteService = CreateNoteService();
-            var note = noteService.GetNoteById(id);
-            return Ok(note);
-        }
-        
         // POST
         [HttpPost]
         public IHttpActionResult Post(NoteCreate note)
@@ -44,6 +29,22 @@ namespace ElevenNote.WebAPI.Controllers
                 return InternalServerError();
 
             return Ok();
+        }
+        // GET
+        [HttpGet]
+        public IHttpActionResult Get()
+        {
+            NoteService noteService = CreateNoteService();
+            var notes = noteService.GetNotes();
+            return Ok(notes);
+        }
+        //GET notes by Id (needs a corresponding service method)
+        [HttpGet]
+        public IHttpActionResult Get(int id)
+        {
+            NoteService noteService = CreateNoteService();
+            var note = noteService.GetNoteById(id);
+            return Ok(note);
         }
         // PUT
         [HttpPut]
